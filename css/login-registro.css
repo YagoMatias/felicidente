@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap");
+
+* {
+  margin: 0 auto;
+  padding: 0 auto;
+  font-family: "Nunito", sem serifa;
+}
+
+/* ==================== MENU ================================= */
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 5rem;
+  background-color: white;
+  /* background-color: #4867d6; */
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 3rem;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  font-weight: bold;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: #4867d6;
+}
+
+a:hover {
+  box-shadow: 0px 1px 0px 0px #4867d6;
+}
+
+a:focus {
+  box-shadow: 0px 1px 0px 0px #4867d6;
+}
+
+/* ================================================================================================ */
+/* =====================================SECTION LOSANGO=============================================== */
+
+.botao-login-registre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* gap: 8rem; */
+  margin-top: 1rem;
+}
+
+.botao-login-registre a {
+  margin: 0rem 0rem 0rem 0rem;
+  box-shadow: 0px 1px 0px 0px gray;
+  text-align: center;
+  width: 9rem;
+  height: 2rem;
+  color: white;
+  font-size: 1rem;
+}
+
+.login-box {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 0rem;
+  background-color: #4867d6;
+  padding: 3rem 0rem;
+  margin-top: 1rem;
+}
+
+.login-content.imagem {
+}
+
+.login-content.imagem img {
+  width: 48rem;
+  height: 31rem;
+  margin: 0.4rem 0rem 0rem -4rem;
+}
+
+@media (max-width: 1151px) {
+  .login-content.imagem img {
+    width: 38rem;
+    height: 25rem;
+    margin: 0.4rem 0rem 0rem 0rem;
+  }
+}
+
+form {
+  background-color: #4867d6;
+  margin-top: rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 2rem;
+  padding: 3rem;
+}
+
+input {
+  border: 0px;
+  outline: none;
+  background-color: transparent;
+  box-shadow: 0px 1px 0px 0px white;
+  color: white;
+  font-size: 1.3rem;
+  width: 20rem;
+}
+
+input:focus {
+  border: 0px;
+  outline: none;
+  background-color: transparent;
+  box-shadow: 0px 1px 0px 0px white;
+}
+
+#senha::-webkit-input-placeholder,
+#email::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.459);
+  font-size: 1rem;
+}
+
+form button {
+  display: block;
+  border: 1px solid #21357e;
+  background-color: white;
+  padding: 10px 35px 10px 35px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5%;
+  color: gray;
+  font-weight: bold;
+}
+
+form p a {
+  color: white;
+  text-align: left;
+}
+
+/* ============================================================================ */
+/* =====================================FOOTER=================================== */
+
+footer {
+  background-color: rgba(0, 0, 0, 0.863);
+  color: white;
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 2rem;
+}
