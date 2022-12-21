@@ -376,7 +376,6 @@ a:focus {
   top: 0rem;
   left: 13.5rem;
   padding: 2rem;
-  border: 2px solid lime;
 }
 
 @media (max-width: 1290px) {
@@ -388,7 +387,6 @@ a:focus {
     top: 0rem;
     left: 3.5rem;
     padding: 2rem;
-    border: 2px solid lime;
   }
 }
 .sobre-box.valores {
