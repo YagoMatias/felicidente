@@ -86,8 +86,8 @@ a:focus {
 }
 
 .content.img img {
-  width: 45rem;
-  height: 30rem;
+  width: 80%;
+  height: 30%;
 }
 
 div.content.login {
