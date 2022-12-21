@@ -58,59 +58,63 @@ a:focus {
 /* ================================================================================================ */
 /* =====================================SECTION LOSANGO=============================================== */
 
-.botao-login-registre {
+.conteiner {
+  height: 100vh;
+  background-color: #4867d6;
   display: flex;
-  justify-content: center;
   align-items: center;
-  /* gap: 8rem; */
-  margin-top: 1rem;
 }
 
-.botao-login-registre a {
-  margin: 0rem 0rem 0rem 0rem;
-  box-shadow: 0px 1px 0px 0px gray;
-  text-align: center;
-  width: 9rem;
-  height: 2rem;
-  color: white;
-  font-size: 1rem;
-}
-
-.login-box {
+.box {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 0rem;
+  align-items: center;
+  width: 90vw;
+  height: 80vh;
+  /* background-color: lime; */
+}
+
+.botao {
+  display: flex; 
+  padding: 0rem 3rem;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0px 1px 0px 0px white;
+}
+.botao p {
+  cursor: pointer;
+}
+
+.content.img img {
+  width: 45rem;
+  height: 30rem;
+}
+
+div.content.login {
+  width: 30%;
+  height: 80%;
   background-color: #4867d6;
-  padding: 3rem 0rem;
-  margin-top: 1rem;
 }
 
-.login-content.imagem {
+.content.login.ativo {
+  display: none;
 }
 
-.login-content.imagem img {
-  width: 48rem;
-  height: 31rem;
-  margin: 0.4rem 0rem 0rem -4rem;
+.content.registro {
+  display: none;
 }
-
-@media (max-width: 1151px) {
-  .login-content.imagem img {
-    width: 38rem;
-    height: 25rem;
-    margin: 0.4rem 0rem 0rem 0rem;
-  }
+.content.registro.ativo {
+  display: block;
+  width: 30%;
+  height: 80%;
 }
 
 form {
-  background-color: #4867d6;
-  margin-top: rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  gap: 2rem;
-  padding: 3rem;
+  gap: 1.8rem;
+  margin-bottom: 1rem;
 }
 
 input {
@@ -123,6 +127,16 @@ input {
   width: 20rem;
 }
 
+.ativo form input {
+  border: 0px;
+  outline: none;
+  background-color: transparent;
+  box-shadow: 0px 1px 0px 0px white;
+  color: white;
+  font-size: 1rem;
+  width: 20rem;
+}
+
 input:focus {
   border: 0px;
   outline: none;
@@ -130,8 +144,11 @@ input:focus {
   box-shadow: 0px 1px 0px 0px white;
 }
 
+#nome::-webkit-input-placeholder,
+#email::-webkit-input-placeholder,
 #senha::-webkit-input-placeholder,
-#email::-webkit-input-placeholder {
+#senha-confirma::-webkit-input-placeholder,
+#CPF::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.459);
   font-size: 1rem;
 }
@@ -148,10 +165,6 @@ form button {
   font-weight: bold;
 }
 
-form p a {
-  color: white;
-  text-align: left;
-}
 
 /* ============================================================================ */
 /* =====================================FOOTER=================================== */
