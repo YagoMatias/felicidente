@@ -11,6 +11,8 @@ export default function filtroRegistro() {
     infosDentista.classList.remove("ativo");
   }
 
+  if(!!botaoDentista) {
   botaoDentista.addEventListener("click", showDentista);
   botaoPaciente.addEventListener("click", hideDentista);
+}
 }
