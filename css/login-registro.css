@@ -59,10 +59,10 @@ a:focus {
 /* =====================================SECTION LOSANGO=============================================== */
 
 .conteiner {
-  height: 100vh;
+  height: 60rem;
   background-color: #4867d6;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .box {
@@ -71,11 +71,13 @@ a:focus {
   align-items: center;
   width: 90vw;
   height: 80vh;
+  padding: 5rem;
   /* background-color: lime; */
 }
 
 .botao {
-  display: flex; 
+  display: flex;
+  justify-content: space-around;
   padding: 0rem 3rem;
   color: white;
   font-weight: bold;
@@ -83,6 +85,7 @@ a:focus {
 }
 .botao p {
   cursor: pointer;
+  padding: 0.5rem;
 }
 
 .content.img img {
@@ -148,7 +151,9 @@ input:focus {
 #email::-webkit-input-placeholder,
 #senha::-webkit-input-placeholder,
 #senha-confirma::-webkit-input-placeholder,
-#CPF::-webkit-input-placeholder {
+#CPF::-webkit-input-placeholder,
+#CRO::-webkit-input-placeholder,
+#especialidade::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.459);
   font-size: 1rem;
 }
@@ -165,6 +170,41 @@ form button {
   font-weight: bold;
 }
 
+.content-filtro {
+  display: flex;
+  margin: 1rem;
+}
+
+.botao-filtro {
+  display: flex;
+  gap: 3rem;
+  margin: 0px 0px 0px 50px;
+  padding: 0px 0px 0px 0px;
+}
+
+.botao-filtro button {
+  border: 0;
+  background-color: transparent;
+  padding: 2px 5px 2px 5px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  border-radius: 5%;
+  color: white;
+  font-weight: bold;
+}
+
+.dentistas {
+  display: none;
+}
+
+.dentistas.ativo {
+  display: block;
+}
+
+#CRO,
+#especialidade {
+  margin: 18px 0px;
+}
 
 /* ============================================================================ */
 /* =====================================FOOTER=================================== */
