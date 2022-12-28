@@ -1,2 +1,3 @@
 # site-dentista
- clinica de dentista
+
+Aplicação de gestão para dentistas.
