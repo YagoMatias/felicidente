@@ -74,12 +74,6 @@ a:focus {
   border-radius: 1px solid lime;
 }
 
-.odonto-textos h2 {
-  font-size: 1.5rem;
-  color: gray;
-  margin: 10px 10px 10px 0px;
-}
-
 .odonto-textos h1 {
   font-size: 2.2rem;
   margin: 15px 15px 15px 0px;
@@ -165,7 +159,6 @@ a:focus {
 
 .escolher {
   display: flex;
-  /* height: 60rem; */
   margin-bottom: 10rem;
 }
 
@@ -270,7 +263,7 @@ a:focus {
   }
 
   .escolher-texto p {
-    font-size: 1.0rem;
+    font-size: 1rem;
     margin: 0.7rem;
   }
 
@@ -312,7 +305,7 @@ a:focus {
     top: 25rem;
     left: 7rem;
     color: white;
-    font-size: 1.0rem;
+    font-size: 1rem;
   }
 
   .escolher-texto > div {
@@ -351,7 +344,7 @@ a:focus {
   grid-gap: 10px;
 }
 
-@media(max-width: 935px) {
+@media (max-width: 935px) {
   .servicos-conteiner {
     display: flex;
     flex-direction: column;

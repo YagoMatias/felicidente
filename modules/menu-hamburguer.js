@@ -1,13 +1,13 @@
 export default function menuHamburguer() {
-
-  const botaoHamburguer = document.querySelector('.botaoHamburguer .hamburguer');
+  const botaoHamburguer = document.querySelector("#menu-hamburguer");
   console.log(botaoHamburguer);
 
-  function activeButton() {
-    botaoHamburguer.classList.toggle('is-active')
+  function hamburger(event) {
+    event.preventDefault();
+    botaoHamburguer.classList.toggle("is-active");
   }
 
-  if(!!botaoHamburguer) {
-  botaoHamburguer.addEventListener('click', activeButton)
+  if (botaoHamburguer) {
+    botaoHamburguer.addEventListener("click", hamburger);
   }
 }
