@@ -105,99 +105,62 @@ a:focus {
 
 .conteiner {
   display: flex;
-  justify-content: baseline;
+  justify-content: center;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-start;
   background-color: #4867d6;
+  padding: 5rem;
 }
 
 .box {
   max-width: 40rem;
   max-height: 40rem;
-  padding: 5rem;
 }
+/* ================================================================================================== */
 
-.botao {
-  display: flex;
-  justify-content: space-around;
-  padding: 0rem 3rem;
-  color: white;
-  font-weight: bold;
-  box-shadow: 0px 1px 0px 0px white;
-}
-.botao p {
-  cursor: pointer;
-  padding: 0.5rem;
-}
-
-div.content.login {
-  max-width: 30rem;
-  max-height: 40rem;
-  padding: 1rem;
-  background-color: #4867d6;
-}
-
-.content.login.ativo {
+.content-login.ativo {
   display: none;
 }
 
-.content.registro {
-  display: none;
-}
-.content.registro.ativo {
-  display: block;
-  max-width: 30rem;
-  max-height: 40rem;
-  padding: 1rem;
-}
-
-form {
+.content-login {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  gap: 1.8rem;
-  margin-bottom: 1rem;
+  gap: 2rem;
 }
 
-input {
+.content-login .botao {
+  display: flex;
+  gap: 5rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 2px 0px -1px white;
+  padding: 1rem 2rem;
+}
+
+.content-login > form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.content-login > form > input {
   border: 0px;
   outline: none;
   background-color: transparent;
-  box-shadow: 0px 1px 0px 0px white;
+  box-shadow: 0px 2px 0px -1px white;
   color: white;
   font-size: 1.3rem;
-  width: 20rem;
-}
-
-.ativo form input {
-  border: 0px;
-  outline: none;
-  background-color: transparent;
-  box-shadow: 0px 1px 0px 0px white;
-  color: white;
-  font-size: 1rem;
-  width: 20rem;
-}
-
-input:focus {
-  border: 0px;
-  outline: none;
-  background-color: transparent;
-  box-shadow: 0px 1px 0px 0px white;
 }
 
 #nome::-webkit-input-placeholder,
-#email::-webkit-input-placeholder,
-#senha::-webkit-input-placeholder,
-#senha-confirma::-webkit-input-placeholder,
-#CPF::-webkit-input-placeholder,
-#CRO::-webkit-input-placeholder,
-#especialidade::-webkit-input-placeholder {
+#email-login::-webkit-input-placeholder,
+#senha-login::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.459);
   font-size: 1rem;
 }
 
-form button {
+.logar-button {
   display: block;
   border: 1px solid #21357e;
   background-color: white;
@@ -209,40 +172,102 @@ form button {
   font-weight: bold;
 }
 
-.content-filtro {
-  display: flex;
-  margin: 1rem;
-}
-
-.botao-filtro {
-  display: flex;
-  gap: 3rem;
-  margin: 0px 0px 0px 50px;
-  padding: 0px 0px 0px 0px;
-}
-
-.botao-filtro button {
-  border: 0;
-  background-color: transparent;
-  padding: 2px 5px 2px 5px;
-  cursor: pointer;
-  font-size: 0.8rem;
-  border-radius: 5%;
+.logar-button:hover {
+  background-color: #4867d6;
   color: white;
+}
+
+.content-registro {
+  display: none;
+}
+
+.content-registro.ativo {
+  display: flex;
+  flex-direction: column;
+}
+
+.registrar-button {
+  display: block;
+  border: 1px solid #21357e;
+  background-color: white;
+  padding: 10px 35px 10px 35px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5%;
+  color: gray;
   font-weight: bold;
 }
+#nome::-webkit-input-placeholder,
+#CPF::-webkit-input-placeholder,
+#CRO::-webkit-input-placeholder,
+#especialidade::-webkit-input-placeholder,
+#email::-webkit-input-placeholder,
+#senha-confirma::-webkit-input-placeholder,
+#senha-dentista::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.459);
+  font-size: 1rem;
+}
+
+/* #senha {
+  margin-top: 0.5rem;
+} */
 
 .dentistas {
   display: none;
 }
 
-.dentistas.ativo {
-  display: block;
+.dentistas.ativou {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 #CRO,
 #especialidade {
-  margin: 18px 0px;
+  border: 0px;
+  outline: none;
+  background-color: transparent;
+  box-shadow: 0px 2px 0px -1px white;
+  color: white;
+  font-size: 1.3rem;
+}
+/* -------------------------------------------------------------------------- */
+
+.botao {
+  display: flex;
+  gap: 5rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0px 2px 0px -1px white;
+  padding: 1rem 2rem;
+}
+
+.logar {
+}
+
+.registrar {
+}
+
+.botao-paciente {
+}
+
+.botao-dentista {
+}
+
+.content-registro > form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.content-registro > form > input {
+  border: 0px;
+  outline: none;
+  background-color: transparent;
+  box-shadow: 0px 2px 0px -1px white;
+  color: white;
+  font-size: 1.3rem;
 }
 
 /* ============================================================================ */

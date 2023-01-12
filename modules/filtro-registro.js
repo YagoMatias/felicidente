@@ -1,14 +1,14 @@
 export default function filtroRegistro() {
-  const botaoDentista = document.querySelector("button.botao-dentista");
-  const botaoPaciente = document.querySelector("button.botao-paciente");
+  const botaoDentista = document.querySelector(".botao-dentista");
+  const botaoPaciente = document.querySelector(".botao-paciente");
   const infosDentista = document.querySelector(".dentistas");
 
   function showDentista() {
-    infosDentista.classList.add("ativo");
+    infosDentista.classList.add("ativou");
   }
 
   function hideDentista() {
-    infosDentista.classList.remove("ativo");
+    infosDentista.classList.remove("ativou");
   }
 
   if (botaoDentista) {

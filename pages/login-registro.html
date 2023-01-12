@@ -31,7 +31,7 @@
       </div>
       <script type="text/javascript" src="main.js">
       </script>
-      <div class="content login">
+      <div class="content-login">
         <div class="botao">
           <p class="logar">Login</p>
           <p class="registrar">Registrar-se</p>
@@ -42,21 +42,15 @@
           <label for="senha-login"></label>
           <input type="password" id="senha-login" placeholder="Senha">
           <a style="color: white; cursor: pointer;">Perdeu sua senha ?</a>
-          <button>Logar</button>
         </form>
+        <button class="logar-button">Entrar</button>
       </div>
-      <div class="content registro">
+      <div class="content-registro">
         <div class="botao">
-          <p class="logar">Login</p>
-          <p class="registrar">Registrar-se</p>
+          <p class="botao-paciente">Paciente</p>
+          <p class="botao-dentista">Dentista</p>
         </div>
-        <div class="content-filtro">
-          <div class="botao-filtro">
-            <button class="botao-paciente">Paciente</button>
-            <button class="botao-dentista">Dentista</button>
-          </div>
-        </div>
-        <form action="./">
+        <form class="form-registro" action="./">
           <label for="nome"></label>
           <input type="text" id="nome" placeholder="Nome completo">
           <label for="email-login"></label>
@@ -68,12 +62,13 @@
             <input type="text" id="CRO" placeholder="CRO">
             <label for="especialidade"></label>
             <input type="text" id="especialidade" placeholder="Especialidade">
-            <label for="senha"></label>
           </div class="dentistas">
-          <input type="password" id="senha" placeholder="Senha">
+          <label for="senha-dentista"></label>
+          <input type="password" id="senha-dentista" placeholder="Senha">
           <label for="senha-confirma"></label>
           <input type="password" id="senha-confirma" placeholder="Confirme sua senha">
-          <button>Registrar</button>
+          <a style="color: white; font-weight: bold; cursor: pointer;" class="logar">Voltar ao Login</a>
+          <button class="registrar-button">Registrar</button>
         </form>
       </div>
       </div>
