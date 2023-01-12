@@ -1,6 +1,6 @@
 export default function menuHamburguer() {
   const botaoHamburguer = document.querySelector("#menu-hamburguer");
-  console.log(botaoHamburguer);
+  const links = document.querySelectorAll(".menu-mobile > li");
 
   function hamburger(event) {
     event.preventDefault();
@@ -10,4 +10,12 @@ export default function menuHamburguer() {
   if (botaoHamburguer) {
     botaoHamburguer.addEventListener("click", hamburger);
   }
+
+  function fecharMenu() {
+    botaoHamburguer.classList.remove("is-active");
+  }
+
+  links.forEach((item) => {
+    item.addEventListener("click", fecharMenu);
+  });
 }
