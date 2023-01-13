@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/desktop-login.css">
+  <link rel="stylesheet" href="../css/mobile-login.css">
   <title>Document</title>
 </head>
 
@@ -13,20 +14,32 @@
   <header>
     <p>LOGO</p>
     <nav>
-      <li><a href="../index.html">ÍNICIO</a></li>
-      <li><a href="./">SERVIÇOS</a></li>
-      <li><a href=".;">SOBRE</a></li>
-      <li><a href="./">CONTATOS</a></li>
+      <li><a href="#inicio">ÍNICIO</a></li>
+      <li><a href="#servicos">SERVIÇOS</a></li>
+      <li><a href="#sobre">SOBRE</a></li>
+      <li><a href="#contatos">CONTATOS</a></li>
+
     </nav>
+    <div class="botaoHamburguer">
+      <button id="menu-hamburguer" class="hamburger hamburger--3dx " type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+    </div>
   </header>
+
+  <nav class="menu-mobile">
+    <li><a href="#inicio">ÍNICIO</a></li>
+    <li><a href="#servicos">SERVIÇOS</a></li>
+    <li><a href="#sobre">SOBRE</a></li>
+    <li><a href="#contatos">CONTATOS</a></li>
+  </nav>
+
   <main>
     <section class="conteiner">
       <div class="box">
         <div id="banner" class="banner">
-          <h1 id="h1">Parallax</h1>
-          <button id="button">
-            Get Started
-          </button>
         </div>
       </div>
       <script type="text/javascript" src="main.js">
@@ -73,34 +86,6 @@
       </div>
       </div>
     </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   </main>
   <footer>
     <h3>Site criado e desenvolvido por</h3>
