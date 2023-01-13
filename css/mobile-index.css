@@ -11,6 +11,10 @@
     display: none;
   }
 
+  body {
+    background-color: white;
+  }
+
   /* ================================Header=================== */
 
   header {
