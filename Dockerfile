@@ -1,4 +1,12 @@
-FROM php:7.3-apache
+FROM node:alpine
 
-RUN docker-php-ext-install pdo pdo_mysql
-RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
+WORKDIR /usr/app
+
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+
+EXPOSE 3000
+
+CMD ["npm", "start"]
