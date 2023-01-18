@@ -9,4 +9,4 @@ COPY . .
 
 EXPOSE 3000
 
-CMD ["npm", "run", "start"]
+CMD [ -d "node_modules" ] && npm run dev || npm ci && npm run dev
