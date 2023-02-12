@@ -49,39 +49,39 @@
           <p class="logar">Login</p>
           <p class="registrar">Registrar-se</p>
         </div>
-        <form action="/teste.html">
+        <form method="post" action="/login">
           <label for="email-login"></label>
-          <input type="email" id="email-login" placeholder="Email" required>
+          <input type="email" id="email-login" name="email-login" placeholder="Email" required>
           <label for="senha-login"></label>
-          <input type="password" id="senha-login" placeholder="Senha">
+          <input type="password" id="senha-login" name="senha-login" placeholder="Senha">
           <a style="color: white; cursor: pointer;">Perdeu sua senha ?</a>
+          <button type="submit" class="logar-button">Entrar</button>
         </form>
-        <button class="logar-button">Entrar</button>
       </div>
       <div class="content-registro">
         <div class="botao">
           <p class="botao-paciente">Paciente</p>
           <p class="botao-dentista">Dentista</p>
         </div>
-        <form class="form-registro" action="./">
+        <form class="form-registro" method="post" action="/login">
           <label for="nome"></label>
-          <input type="text" id="nome" placeholder="Nome completo">
+          <input type="text" id="nome" name="nome" placeholder="Nome completo">
           <label for="email-login"></label>
-          <input type="email" id="email" placeholder="Email">
+          <input type="email" id="email" name="email" placeholder="Email">
           <label for="CPF"></label>
-          <input type="text" id="CPF" placeholder="CPF">
+          <input type="text" id="CPF" name="CPF" placeholder="CPF">
           <div class="dentistas">
             <label for="CRO"></label>
-            <input type="text" id="CRO" placeholder="CRO">
+            <input type="text" id="CRO" name="CRO" placeholder="CRO">
             <label for="especialidade"></label>
-            <input type="text" id="especialidade" placeholder="Especialidade">
+            <input type="text" id="especialidade" name="especialidade" placeholder="Especialidade">
           </div class="dentistas">
           <label for="senha-dentista"></label>
-          <input type="password" id="senha-dentista" placeholder="Senha">
+          <input type="password" id="senha-dentista" name="senha-dentista" placeholder="Senha">
           <label for="senha-confirma"></label>
-          <input type="password" id="senha-confirma" placeholder="Confirme sua senha">
+          <input type="password" id="senha-confirma" name="senha-confirma" placeholder="Confirme sua senha">
           <a style="color: white; font-weight: bold; cursor: pointer;" class="logar">Voltar ao Login</a>
-          <button class="registrar-button">Registrar</button>
+          <button type="submit" class="registrar-button">Registrar</button>
         </form>
       </div>
       </div>
