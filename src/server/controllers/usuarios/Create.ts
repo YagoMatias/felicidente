@@ -24,15 +24,19 @@ const validacaoUsuario: yup.ObjectSchema<IUsuario> = yup.object().shape({
 const create = async (req: Request<{}, {}, IUsuario>, res: Response) => {
   let usuarioValidado: IUsuario | undefined = undefined;
   try {
-    usuarioValidado = await validacaoUsuario.validate(req.body);
-  } catch (error) {
-    const yupError = error as yup.ValidationError;
-
-    return res.json({
-      errors: {
-        default: yupError.message,
-      },
+    usuarioValidado = await validacaoUsuario.validate(req.body, {
+      abortEarly: false,
     });
+  } catch (err) {
+    const yupError = err as yup.ValidationError;
+    const errors: Record<string, string> = {};
+
+    yupError.inner.forEach((error) => {
+      if (!error.path) return;
+      errors[error.path] = error.message;
+    });
+
+    return res.json({ errors });
   }
   return res.json(req.body);
 };
