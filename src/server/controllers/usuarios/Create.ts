@@ -1,4 +1,5 @@
-import { Request, Response } from "express";
+import { Request, RequestHandler, Response } from "express";
+import { StatusCodes } from "http-status-codes";
 import * as yup from "yup";
 
 interface IUsuario {
@@ -21,12 +22,12 @@ const validacaoUsuario: yup.ObjectSchema<IUsuario> = yup.object().shape({
   senhaConfirma: yup.string().required(),
 });
 
-const create = async (req: Request<{}, {}, IUsuario>, res: Response) => {
-  let usuarioValidado: IUsuario | undefined = undefined;
+export const createValidacaUsuario: RequestHandler = async (req, res, next) => {
   try {
-    usuarioValidado = await validacaoUsuario.validate(req.body, {
+    await validacaoUsuario.validate(req.body, {
       abortEarly: false,
     });
+    return next();
   } catch (err) {
     const yupError = err as yup.ValidationError;
     const errors: Record<string, string> = {};
@@ -35,9 +36,11 @@ const create = async (req: Request<{}, {}, IUsuario>, res: Response) => {
       if (!error.path) return;
       errors[error.path] = error.message;
     });
-
-    return res.json({ errors });
+    return res.status(StatusCodes.BAD_REQUEST).json({ errors });
   }
+};
+
+const create = async (req: Request<{}, {}, IUsuario>, res: Response) => {
   return res.json(req.body);
 };
 

@@ -12,6 +12,10 @@ router.get("/login", (req, res) => {
   res.sendFile(`${__dirname}/public/pages/login-registro.html`);
 });
 
-router.post("/login", UsuariosController.create);
+router.post(
+  "/login",
+  UsuariosController.createValidacaUsuario,
+  UsuariosController.create
+);
 
 export { router };
