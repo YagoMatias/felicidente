@@ -14,7 +14,7 @@ router.get("/login", (req, res) => {
 
 router.post(
   "/login",
-  UsuariosController.createValidacaUsuario,
+  UsuariosController.createValidation,
   UsuariosController.create
 );
 
