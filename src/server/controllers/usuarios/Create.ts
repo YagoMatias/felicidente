@@ -1,6 +1,7 @@
-import { Request, RequestHandler, Response } from "express";
+import { Request, Response } from "express";
 import { Validation } from "../../shared/middleware";
 import * as yup from "yup";
+import { StatusCodes } from "http-status-codes";
 
 interface IUsuario {
   nome: string;
@@ -25,5 +26,9 @@ export const createValidation = Validation({
 });
 
 export const create = async (req: Request<{}, {}, IUsuario>, res: Response) => {
-  return res.json(req.body);
+  console.log(req.body);
+
+  return res
+    .status(StatusCodes.INTERNAL_SERVER_ERROR)
+    .send("Não implementado!");
 };
