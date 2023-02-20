@@ -1,6 +1,7 @@
-import { Request, RequestHandler, Response } from "express";
-import { StatusCodes } from "http-status-codes";
+import { Request, Response } from "express";
+import { Validation } from "../../shared/middleware";
 import * as yup from "yup";
+import { StatusCodes } from "http-status-codes";
 
 interface IUsuario {
   nome: string;
@@ -12,36 +13,22 @@ interface IUsuario {
   senhaConfirma: string;
 }
 
-const validacaoUsuario: yup.ObjectSchema<IUsuario> = yup.object().shape({
-  nome: yup.string().required(),
-  email: yup.string().required().email(),
-  cpf: yup.string().required(),
-  cro: yup.string(),
-  especialidade: yup.string(),
-  senha: yup.string().required(),
-  senhaConfirma: yup.string().required(),
+export const createValidation = Validation({
+  body: yup.object().shape({
+    nome: yup.string().required(),
+    email: yup.string().required().email(),
+    cpf: yup.string().required(),
+    cro: yup.string(),
+    especialidade: yup.string(),
+    senha: yup.string().required(),
+    senhaConfirma: yup.string().required(),
+  }),
 });
 
-export const createValidacaUsuario: RequestHandler = async (req, res, next) => {
-  try {
-    await validacaoUsuario.validate(req.body, {
-      abortEarly: false,
-    });
-    return next();
-  } catch (err) {
-    const yupError = err as yup.ValidationError;
-    const errors: Record<string, string> = {};
+export const create = async (req: Request<{}, {}, IUsuario>, res: Response) => {
+  console.log(req.body);
 
-    yupError.inner.forEach((error) => {
-      if (!error.path) return;
-      errors[error.path] = error.message;
-    });
-    return res.status(StatusCodes.BAD_REQUEST).json({ errors });
-  }
+  return res
+    .status(StatusCodes.INTERNAL_SERVER_ERROR)
+    .send("Não implementado!");
 };
-
-const create = async (req: Request<{}, {}, IUsuario>, res: Response) => {
-  return res.json(req.body);
-};
-
-export { create };
