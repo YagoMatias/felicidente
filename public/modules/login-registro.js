@@ -1,4 +1,4 @@
-export default function teste() {
+export default function loginRegistro() {
   const formLogin = document.querySelector(".content-login");
   const formRegistro = document.querySelector(".content-registro");
   const botaoLogin = document.querySelectorAll(".logar");
