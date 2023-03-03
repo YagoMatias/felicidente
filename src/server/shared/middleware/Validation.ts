@@ -8,9 +8,9 @@ type TAllSchemas = Record<TProperty, ObjectSchema<any>>;
 
 type TValidation = (schemas: Partial<TAllSchemas>) => RequestHandler;
 
-const errosResult: Record<string, Record<string, string>> = {};
-
 export const Validation: TValidation = (schemas) => async (req, res, next) => {
+  const errosResult: Record<string, Record<string, string>> = {};
+
   Object.entries(schemas).forEach(([key, schema]) => {
     try {
       schema.validateSync(req[key as TProperty], {
@@ -32,6 +32,6 @@ export const Validation: TValidation = (schemas) => async (req, res, next) => {
   if (Object.entries(errosResult).length === 0) {
     return next();
   } else {
-    return res.status(StatusCodes.BAD_REQUEST).json({ errosResult });
+    return res.status(StatusCodes.BAD_REQUEST).json({ erros: errosResult });
   }
 };
