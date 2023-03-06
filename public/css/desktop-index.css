@@ -1,15 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap");
 
 @media (min-width: 801px) {
   * {
     margin: 0 auto;
     padding: 0 auto;
     font-family: "Nunito", sem serifa;
+    scroll-behavior: smooth;
   }
 
-  img {
+  /* img {
     display: none;
-  }
+  } */
 
   .botaoHamburguer {
     display: none;
@@ -25,6 +27,25 @@
   .js-scroll.ativo {
     opacity: 1;
     transform: translate3d(0, 0, 0);
+  }
+
+  /* ======================= LOGO ================================ */
+
+  .logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: last baseline;
+    align-items: center;
+    font-size: 2rem;
+    font-family: "Tilt Neon";
+    gap: 2rem;
+  }
+
+  .logo > img {
+    width: 5rem;
+    height: 5rem;
+    margin: -18px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
   }
 
   /* ==================== MENU ================================= */
@@ -65,6 +86,10 @@
     box-shadow: 0px 1px 0px 0px white;
   }
 
+  .menu-mobile {
+    display: none;
+  }
+
   /* ==================== SECTION ODONTO ================================= */
 
   .odonto {
@@ -73,6 +98,7 @@
   }
 
   .odonto-textos {
+    padding: 5rem;
     max-width: 20rem;
   }
 
@@ -85,7 +111,10 @@
 
   .odonto img {
     display: block;
-    max-width: 20rem;
+    max-width: 25rem;
+    margin: 0rem 0rem 0rem 0rem;
+    padding: 1rem 0 0 0;
+    height: 40rem;
   }
 
   /* ========================== SECTION SERVICOS ======================= */
@@ -94,12 +123,13 @@
     background-color: #4867d6;
     padding: 2rem;
     margin-bottom: 5rem;
+    box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.712);
   }
 
   .preventivos-box {
     display: flex;
-    justify-content: space-evenly;
-    align-items: baseline;
+    justify-content: space-around;
+    align-items: first last baseline;
     flex-wrap: wrap;
   }
 
@@ -111,7 +141,7 @@
   }
 
   .preventivos ul {
-    margin: 2rem;
+    margin: 2rem 20rem;
   }
 
   .preventivos li {
@@ -155,12 +185,14 @@
     background-color: #4867d6;
     box-shadow: 1rem 1rem 0rem 1rem #4867d6;
     margin-bottom: 5rem;
+    box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.712);
   }
 
   .escolher img {
     display: block;
     max-width: 35rem;
     margin: 3rem 1rem 1rem 1rem;
+    box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.712);
   }
 
   .escolher-texto {
@@ -217,6 +249,7 @@
     grid-auto-flow: dense;
     background-color: white;
     grid-gap: 10px;
+    box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.712);
   }
 
   @media (max-width: 935px) {
@@ -287,31 +320,42 @@
   /* ========================= SECTION SOBRE ================  */
 
   .sobre-conteiner {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    color: white;
   }
 
   .sobre-conteiner h1 {
+    align-items: center;
     text-align: center;
     margin: 2rem 0rem;
     font-size: 2.5rem;
     color: gray;
   }
 
+  .sobre {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+  }
+
   .sobre-box.missao {
     margin: 5rem;
     padding: 3rem;
     max-width: 60rem;
-    box-shadow: 4rem -3rem 0rem 3rem #4867d6;
+    background-color: #4867d6;
+    box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.712);
   }
 
   .sobre-box.valores {
     margin: 5rem;
     padding: 3rem;
-    max-width: 60rem;
-    box-shadow: -3rem -3rem 0rem 3rem #21357e;
+    max-width: 45rem;
+    background-color: #21357e;
+    box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.712);
   }
 
   .sobre-content {
@@ -333,12 +377,9 @@
   /* ========================= SECTION CONTATOS ================  */
 
   .contatos-conteiner {
-    /* display: flex;
-  /* flex-direction: column; */
-    /* justify-content: center;
-  align-items: center;
-  gap: 3rem; */
     background-color: #4867d6;
+    box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.712);
+    max-height: 50rem;
   }
 
   .contatos-conteiner h2 {
@@ -353,9 +394,8 @@
 
   .contatos-box {
     display: flex;
-    justify-content: center;
+    justify-content: first baseline;
     align-items: center;
-    margin: 5rem;
   }
 
   .contatos-content ul {
@@ -363,13 +403,13 @@
     justify-content: space-around;
     align-items: center;
     gap: 3rem;
-    margin-top: -8rem;
+    margin-top: -4rem;
     margin-bottom: 5rem;
   }
 
   .contatos-content p {
     text-align: center;
-    font-size: 3rem;
+    font-size: 1.8rem;
     color: white;
     margin: 1rem 0rem;
   }
@@ -382,10 +422,10 @@
   }
 
   form {
-    margin-top: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    padding: 1rem;
     gap: 2rem;
   }
 
@@ -445,6 +485,35 @@
   form button:hover {
     color: white;
     background-color: #4867d6;
+  }
+
+  /* ================ btnUP =============================== */
+
+  .btnUp {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: #21357e;
+    cursor: pointer;
+    border-radius: 100%;
+    z-index: 300;
+    top: 90vh;
+    right: 30px;
+  }
+
+  .arrow {
+    border: solid white;
+    border-width: 0 7px 7px 0;
+    padding: 5px;
+    display: inline-block;
+  }
+
+  .up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
   }
 
   /* ============================ FOOTER ====================   */
